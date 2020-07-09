@@ -1,0 +1,164 @@
+//using System;
+//using System.Linq;
+//using System.Text;
+//using Jbpc.CyclingTrainingAnalytics.DomainModel;
+//using Jbpc.CyclingTrainingAnalytics.DomainModels.ExtensionMethods;
+//using Jbpc.CyclingTrainingAnalytics.DomainModels.Objects;
+//using Microsoft.AspNetCore.Cors;
+//using Microsoft.AspNetCore.Mvc;
+//using Newtonsoft.Json;
+//using Serilog;
+
+//namespace Jbpc.CyclingTrainingAnalytics.ServerApi.Controllers
+//{
+//    public class RidesController : Controller
+//    {
+//        private readonly IAppContext appContext;
+//        private readonly ILogger logger;
+//        readonly IDiagnosticContext diagnosticContext;
+
+//        public RidesController(IDiagnosticContext diagnosticContext, IAppContext appContext, ILogger logger)
+//        {
+//            this.diagnosticContext = diagnosticContext ?? throw new ArgumentNullException(nameof(diagnosticContext));
+//            this.appContext = appContext;
+//            this.logger = logger;
+//        }
+//        [HttpGet(ApiRoutes.Posts.GetAll)]
+//        [EnableCors("AllowOrigin")]
+//        public IActionResult Get()
+//        {
+//            //logger.RidesCollectionGet();
+
+//            BikeRidesRepositories.DeepRead(appContext.DatabaseContext);
+
+//            var rides = appContext.DatabaseContext.BikeRideRepository.Queries.Objects()
+//                .Select(x => new { x.Name, x.StartDateTime, RideTime = x.RideTime() })
+//                .ToList();
+
+//            return Content(JsonConvert.SerializeObject(rides), "application/json", Encoding.UTF8);
+//        }
+//    }
+//}
+//using System;
+//using System.Linq;
+//using System.Text;
+//using Jbpc.CyclingTrainingAnalytics.DomainModel;
+//using Jbpc.CyclingTrainingAnalytics.DomainModels.ExtensionMethods;
+//using Jbpc.CyclingTrainingAnalytics.DomainModels.Objects;
+//using Microsoft.AspNetCore.Cors;
+//using Microsoft.AspNetCore.Mvc;
+//using Newtonsoft.Json;
+//using Serilog;
+
+//namespace Jbpc.CyclingTrainingAnalytics.ServerApi.Controllers
+//{
+//    public class RidesController : Controller
+//    {
+//        private readonly IAppContext appContext;
+//        private readonly ILogger logger;
+//        readonly IDiagnosticContext diagnosticContext;
+
+//        public RidesController(IDiagnosticContext diagnosticContext, IAppContext appContext, ILogger logger)
+//        {
+//            this.diagnosticContext = diagnosticContext ?? throw new ArgumentNullException(nameof(diagnosticContext));
+//            this.appContext = appContext;
+//            this.logger = logger;
+//        }
+//        [HttpGet(ApiRoutes.Posts.GetAll)]
+//        [EnableCors("AllowOrigin")]
+//        public IActionResult Get()
+//        {
+//            //logger.RidesCollectionGet();
+
+//            BikeRidesRepositories.DeepRead(appContext.DatabaseContext);
+
+//            var rides = appContext.DatabaseContext.BikeRideRepository.Queries.Objects()
+//                .Select(x => new { x.Name, x.StartDateTime, RideTime = x.RideTime() })
+//                .ToList();
+
+//            return Content(JsonConvert.SerializeObject(rides), "application/json", Encoding.UTF8);
+//        }
+//    }
+//}
+//using System;
+//using System.Linq;
+//using System.Text;
+//using Jbpc.CyclingTrainingAnalytics.DomainModel;
+//using Jbpc.CyclingTrainingAnalytics.DomainModels.ExtensionMethods;
+//using Jbpc.CyclingTrainingAnalytics.DomainModels.Objects;
+//using Microsoft.AspNetCore.Cors;
+//using Microsoft.AspNetCore.Mvc;
+//using Newtonsoft.Json;
+//using Serilog;
+
+//namespace Jbpc.CyclingTrainingAnalytics.ServerApi.Controllers
+//{
+//    public class RidesController : Controller
+//    {
+//        private readonly IAppContext appContext;
+//        private readonly ILogger logger;
+//        readonly IDiagnosticContext diagnosticContext;
+
+//        public RidesController(IDiagnosticContext diagnosticContext, IAppContext appContext, ILogger logger)
+//        {
+//            this.diagnosticContext = diagnosticContext ?? throw new ArgumentNullException(nameof(diagnosticContext));
+//            this.appContext = appContext;
+//            this.logger = logger;
+//        }
+//        [HttpGet(ApiRoutes.Posts.GetAll)]
+//        [EnableCors("AllowOrigin")]
+//        public IActionResult Get()
+//        {
+//            //logger.RidesCollectionGet();
+
+//            BikeRidesRepositories.DeepRead(appContext.DatabaseContext);
+
+//            var rides = appContext.DatabaseContext.BikeRideRepository.Queries.Objects()
+//                .Select(x => new { x.Name, x.StartDateTime, RideTime = x.RideTime() })
+//                .ToList();
+
+//            return Content(JsonConvert.SerializeObject(rides), "application/json", Encoding.UTF8);
+//        }
+//    }
+//}
+//using System;
+//using System.Linq;
+//using System.Text;
+//using Jbpc.CyclingTrainingAnalytics.DomainModel;
+//using Jbpc.CyclingTrainingAnalytics.DomainModels.ExtensionMethods;
+//using Jbpc.CyclingTrainingAnalytics.DomainModels.Objects;
+//using Microsoft.AspNetCore.Cors;
+//using Microsoft.AspNetCore.Mvc;
+//using Newtonsoft.Json;
+//using Serilog;
+
+//namespace Jbpc.CyclingTrainingAnalytics.ServerApi.Controllers
+//{
+//    public class RidesController : Controller
+//    {
+//        private readonly IAppContext appContext;
+//        private readonly ILogger logger;
+//        readonly IDiagnosticContext diagnosticContext;
+
+//        public RidesController(IDiagnosticContext diagnosticContext, IAppContext appContext, ILogger logger)
+//        {
+//            this.diagnosticContext = diagnosticContext ?? throw new ArgumentNullException(nameof(diagnosticContext));
+//            this.appContext = appContext;
+//            this.logger = logger;
+//        }
+//        [HttpGet(ApiRoutes.Posts.GetAll)]
+//        [EnableCors("AllowOrigin")]
+//        public IActionResult Get()
+//        {
+//            //logger.RidesCollectionGet();
+
+//            BikeRidesRepositories.DeepRead(appContext.DatabaseContext);
+
+//            var rides = appContext.DatabaseContext.BikeRideRepository.Queries.Objects()
+//                .Select(x => new { x.Name, x.StartDateTime, RideTime = x.RideTime() })
+//                .ToList();
+
+//            return Content(JsonConvert.SerializeObject(rides), "application/json", Encoding.UTF8);
+//        }
+//    }
+//}
